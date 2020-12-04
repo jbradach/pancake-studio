@@ -3,7 +3,7 @@ const axios = require('axios');
 const bodyParser = require('body-parser');
 const flatten = require('flat');
 const path = require('path');
-const sslRedirect = require('heroku-ssl-redirect').default;
+//const sslRedirect = require('heroku-ssl-redirect').default;
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
-app.use(sslRedirect());
+//app.use(sslRedirect());
 // Redirect http calls to https
 // comment this out if you aren't using SSL
 // app.use(function(req, res, next) {
